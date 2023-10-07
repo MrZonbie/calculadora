@@ -5,39 +5,68 @@
   font-family: helvetica;
 }
 
+
 body{
-  background-color: #333;
-  display: flex;
+  background:#090D33;
+  display: flex; 
   align-items: center;
   justify-content: center;
   padding: 3em;
+  
+  
+}
+
+.backgound{
+  
+
+  
+  background: #F8534D;
+  height:50%; 
+  width:100%;
+  position:absolute;
+  top:0;
+
 }
 
 #calc{
+  box-shadow:5px 5px 30px rgba(0,0,0,0.2);
+  position:absolute;     
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding:25px;  
+  width:340px;
+  backdrop-filter:blur(15px);
+  border-radius: 7px;
+
+
+
   width: 400px;
   padding: .5em;
-  background-color: #c4c4c4;
+  background-color: rgba(255,255,255,0.05);
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
 }
 
-#calc #hora {
+
+
+#hora , #data{
   font-size: .8em;
   font-weight: 300;
   color: #666;
-}
-#calc #data {
-  font-size: .8em;
-  font-weight: 300;
-  color: #666;
+  display: flex;
+  justify-content: space-between;
 }
 
 #operations{
   text-align: right;
+  backdrop-filter:blur(15px);
 }
 
 #previous_operation,
 #current-operation{
+ 
   min-height: 1.6em;
   padding: 0.2em;
   overflow-wrap: break-word;
@@ -45,17 +74,20 @@ body{
 }
 
 #previous_operation{
+  
   color:#777;
 
 }
 
 #current-operation{
+  
   font-size: 3em;
   font-weight: 700;
 
 }
 
 #buttons-container{
+  backdrop-filter:blur(15px);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 3px;
@@ -63,27 +95,61 @@ body{
 }
 
 #buttons-container button{
-  border: 1px solid transparent;
-  border-radius: 0;
-  height: 4em;
-  font-size: 1.2em;
-  background-color: #dbdbdb;
-  cursor: pointer;
+  all:unset;        
+  height:70px;
+  width:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom:1px solid rgba(255, 255, 255, 0.06);
+  border-right:1px solid rgba(255, 255, 255, 0.06);
+  float:left;
+  color:white;
+  margin-left:.3px;
+  margin-top:15px;
+  transition:all .2s;
+  cursor:pointer;
+
+
+
+
+
+  
 }
 
 #buttons-container .number {
-  background-color: #f3f3f3;
+
+  
+
+
+  
+  
 }
 #buttons-container button:hover{
-  background-color: #bababa;
-  border-color: #999;
+  background:rgba(255,255,255,0.06); 
+  transition:all .2s;
 }
 
 #buttons-container #equal-btn {
+  backdrop-filter:blur(15px);
   grid-column: span 2;
-  background-color: #75a5cb;
+  background:rgba(255,255,255,0.0); 
+  transition:all .2s;
+  
 }
 
 #buttons-container #equal-btn:hover{
-  background-color: #3a91d8;
+  background:rgba(255,255,255,0.06); 
+transition:all .2s;
 }
+
+
+#operations{
+  
+
+
+  backdrop-filter:blur(15px);
+  box-shadow:inset 0px 0px 9px 0.5px #d85316;
+  border-radius: 5px;
+}
+
